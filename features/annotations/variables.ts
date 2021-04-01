@@ -33,3 +33,8 @@ const logName: (name: string) => void = (name: string) => {
 };
 
 logName('Taufik Pragusga');
+
+// Any type
+const json = '{"yourName": "Taufik Pragusga", "age": 19}';
+const yourData: { yourName: string; age: number } = JSON.parse(json);
+console.log(yourData);

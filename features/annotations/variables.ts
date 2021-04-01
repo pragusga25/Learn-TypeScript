@@ -1,6 +1,7 @@
-let banana: number = 5;
-
+// type inference
+let banana = 5; // Typescript will guess the type of this variable
 banana = 10;
+// banana = 'taufik' => will get an error
 // banana = true; => will get an error
 
 let speed: string = 'fast';
@@ -25,3 +26,10 @@ let point: { x: number; y: number } = {
   x: 10,
   y: 20,
 };
+
+// Function
+const logName: (name: string) => void = (name: string) => {
+  console.log(name);
+};
+
+logName('Taufik Pragusga');

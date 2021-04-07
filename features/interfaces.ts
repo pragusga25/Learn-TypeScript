@@ -1,7 +1,4 @@
-interface Car {
-  name: string;
-  price: number;
-  isCool: boolean;
+interface ReportAble {
   summary(): string;
 }
 
@@ -10,14 +7,22 @@ const car = {
   price: 18000,
   isCool: true,
   summary(): string {
-    return `Name: ${this.name}\n
-            Price: ${this.price}\n
-            Cool? ${this.isCool}`;
+    return `Name: ${this.name}\nPrice: ${this.price}\nCool? ${this.isCool}`;
   },
 };
 
-const printCar = (yourCar: Car): void => {
-  console.log(yourCar.summary());
+const food = {
+  color: 'white',
+  healthy: true,
+  carbohidrat: 100,
+  summary(): string {
+    return `My food has ${this.carbohidrat} grams of carbohidrat`;
+  },
 };
 
-printCar(car);
+const printSummary = (item: ReportAble): void => {
+  console.log(item.summary());
+};
+
+printSummary(car);
+printSummary(food);

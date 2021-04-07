@@ -32,6 +32,12 @@ const logName: (name: string) => void = (name: string) => {
   console.log(name);
 };
 
+// Will be same
+
+// const logName = (name: string): void => {
+//   console.log(name);
+// };
+
 logName('Taufik Pragusga');
 
 // Any type

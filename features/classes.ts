@@ -15,6 +15,10 @@ const vehicle = new Vehicle('red');
 console.log(vehicle.color);
 
 class Car extends Vehicle {
+  constructor(private wheels: number, color: string) {
+    super(color);
+  }
+
   private drive(): void {
     console.log('vroom');
   }
@@ -23,7 +27,12 @@ class Car extends Vehicle {
     this.drive();
     this.honk();
   }
+
+  get wheelsOfCar(): number {
+    return this.wheels;
+  }
 }
 
-// const vehicle = new Car();
-// vehicle.startDrivingProcess();
+const car = new Car(4, 'green');
+car.startDrivingProcess();
+console.log(car.wheelsOfCar);

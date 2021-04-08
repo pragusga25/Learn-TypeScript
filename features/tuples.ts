@@ -11,3 +11,4 @@ ferrari[1] = 20000;
 type Cars = [string, number, boolean];
 const lambo: Cars = ['green', 12000, false];
 const tesla: Cars = ['black', 8000, true];
+

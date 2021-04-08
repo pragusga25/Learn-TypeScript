@@ -1,12 +1,17 @@
 class Vehicle {
-  drive(): void {
-    console.log('Jug jag jug jag');
+  public drive(): void {
+    console.log('Brooommm');
   }
 
-  honk = (): void => {
+  public honk = (): void => {
     console.log('beep');
   };
 }
 
-const vehicle = new Vehicle();
-vehicle.drive();
+class Car extends Vehicle {
+  public drive(): void {
+    console.log('vroom');
+  }
+}
+
+const vehicle = new Car();

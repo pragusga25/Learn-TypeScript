@@ -2,3 +2,5 @@
 *.js
 */dist/
 */.cache/
+*/build/
+*/.vscode/

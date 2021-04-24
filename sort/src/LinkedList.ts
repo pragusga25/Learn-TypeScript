@@ -22,4 +22,33 @@ export class LinkedList {
 
     tail.next = node;
   };
+
+  get length(): number {
+    if (!this.head) return 0;
+
+    let length = 1;
+    let node = this.head;
+
+    while (node.next) {
+      length++;
+      node = node.next;
+    }
+
+    return length;
+  }
+
+  at = (index: number): Node => {
+    if (!this.head) throw new Error('Index out of bounds');
+
+    let counter = 0;
+    let node: Node | null = this.head;
+
+    while (node) {
+      if (counter === index) return node;
+      counter++;
+      node = node.next;
+    }
+
+    throw new Error('Index out of bounds');
+  };
 }

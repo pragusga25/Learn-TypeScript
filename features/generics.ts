@@ -49,3 +49,29 @@ function printAnything<T>(arr: T[]): void {
 
 printAnything<number>([1, 2, 3, 4, 5]);
 printAnything<string>(['a', 'b', 'c', 'd']);
+
+// Generic constraints
+class Car {
+  print(): void {
+    console.log("It's a car");
+  }
+}
+
+class Bike {
+  print(): void {
+    console.log("It's a bike");
+  }
+}
+
+interface Printable {
+  print(): void;
+}
+
+function printCarOrBike<T extends Printable>(arr: T[]): void {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].print();
+  }
+}
+
+printCarOrBike<Car>([new Car(), new Car(), new Car()]);
+printCarOrBike<Bike>([new Bike(), new Bike(), new Bike()]);

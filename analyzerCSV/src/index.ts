@@ -10,8 +10,6 @@ const csvReader = new CsvReader('football.csv');
 const matchReader = new MatchReader(csvReader);
 matchReader.load();
 
-let manUnitedWins = 0;
-
 for (let match of matchReader.matches) {
   ((match[1] === 'Man United' && match[5] === MatchResult.HomeWin) ||
     (match[2] === 'Man United' && match[5] === MatchResult.AwayWin)) &&

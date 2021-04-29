@@ -10,6 +10,8 @@ user.on('change', () => {
   console.log('Hello, I am in change event 2');
 });
 
+user.trigger('change');
+
 console.log(user);
 
 // console.log(user.get('name'));

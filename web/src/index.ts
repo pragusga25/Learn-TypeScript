@@ -2,5 +2,20 @@ import { User } from './models/User';
 
 const user = new User({ name: 'Taufik Pragusga', age: 19 });
 
-console.log(user.get('name'));
-console.log(user.get('age'));
+user.on('change', () => {
+  console.log('Hello, I am in change event 1');
+});
+
+user.on('change', () => {
+  console.log('Hello, I am in change event 2');
+});
+
+console.log(user);
+
+// console.log(user.get('name'));
+// console.log(user.get('age'));
+
+// user.set({ name: 'Pragusga' });
+
+// console.log(user.get('name'));
+// console.log(user.get('age'));

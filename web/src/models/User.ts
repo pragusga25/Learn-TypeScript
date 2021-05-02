@@ -46,4 +46,15 @@ export class User {
       this.set(res.data);
     });
   }
+
+  save(): void {
+    this.sync
+      .save(this.attributes.getAll())
+      .then((): void => {
+        this.trigger('save');
+      })
+      .catch((): void => {
+        this.trigger('error');
+      });
+  }
 }

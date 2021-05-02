@@ -31,7 +31,7 @@ export class CustomMap {
       },
     });
 
-    marker.addListener('click', () => {
+    marker.addListener('click', ():void => {
       const infoWindow = new google.maps.InfoWindow({
         content: mappable.markerContent(),
       });

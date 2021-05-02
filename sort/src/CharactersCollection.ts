@@ -18,6 +18,7 @@ export class CharactersCollection extends Sorter {
   swap = (leftIndex: number, rightIndex: number): void => {
     const characters = this.data.split('');
 
+    // Swapping
     const leftHand = characters[leftIndex];
     characters[leftIndex] = characters[rightIndex];
     characters[rightIndex] = leftHand;

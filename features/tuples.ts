@@ -5,7 +5,6 @@ const cars = {
 };
 
 const ferrari: [string, number, boolean] = ['red', 10000, true];
-// ferrari[1] = 'expensive';  => will get an error
 ferrari[1] = 20000;
 
 type Cars = [string, number, boolean];

@@ -18,4 +18,3 @@ const {
 console.log(age);
 console.log(lat);
 console.log(lng);
-// console.log(coords); => will get an error

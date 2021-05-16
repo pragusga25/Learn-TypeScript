@@ -1,17 +1,10 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import { router } from './routes/loginRoutes';
 
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (req: Request, res: Response) => {
-  res.send(
-    `
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    `
-  );
-});
+app.use(router);
 
 app.listen(6789, () => console.log('Server is running on port 6789'));

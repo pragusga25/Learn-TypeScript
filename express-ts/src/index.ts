@@ -3,7 +3,7 @@ import { router } from './routes/loginRoutes';
 
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(router);
 

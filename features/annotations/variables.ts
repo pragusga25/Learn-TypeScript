@@ -1,8 +1,6 @@
 // type inference
 let banana = 5; // Typescript will guess the type of this variable
 banana = 10;
-// banana = 'taufik' => will get an error
-// banana = true; => will get an error
 
 let speed: string = 'fast';
 let hasName: boolean = true;

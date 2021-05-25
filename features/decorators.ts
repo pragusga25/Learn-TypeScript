@@ -5,27 +5,24 @@ class Person {
     return `My name is ${this.name}`;
   }
 
-  @testDecorator
+  @logError('Oops, person was tired')
   sayHi(): never {
     throw new Error();
     console.log('Hello');
   }
 }
 
-function testDecorator(
-  target: any,
-  key: string,
-  desc: PropertyDescriptor
-): void {
-  const method = desc.value;
-  console.log(method);
+function logError(errorMessage: string): Function {
+  return function (_target: any, _key: string, desc: PropertyDescriptor): void {
+    const method = desc.value;
 
-  desc.value = function () {
-    try {
-      method();
-    } catch (e) {
-      console.error('Error');
-    }
+    desc.value = function () {
+      try {
+        method();
+      } catch (e) {
+        console.error(errorMessage);
+      }
+    };
   };
 }
 

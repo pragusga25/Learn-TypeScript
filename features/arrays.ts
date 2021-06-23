@@ -2,7 +2,7 @@ const cities: string[] = ['jakarta', 'bandung', 'bali'];
 const dates = [new Date(), new Date()];
 
 const carsByMake: string[][] = [
-  ['ferrari', 'bmw'],
+  ['ferrari', 'suzuki'],
   ['tesla'],
   ['lamborghini'],
   ['honda'],
